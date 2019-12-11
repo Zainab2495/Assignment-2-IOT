@@ -1,0 +1,52 @@
+use std::io;
+
+fn function () -> i64 {
+    println!("Enter the number of the following function you wish to perform for eg. 1 for addition");
+    println!("2) Subtraction");
+    println!("3) Multiplication");
+    println!("4) Division");
+    println!("5) Quit");
+    let mut function = String::new();
+    io::stdin().read_line(& mut function).expect("Error");
+    let function: i64 = function.trim().parse().unwrap();
+    function
+}
+
+fn first_num () -> f32 {
+    println!("Enter first number");
+    let mut first_num = String::new();
+    io::stdin().read_line(& mut first_num).expect("Error");
+    let first_num : f32 = first_num.trim().parse().unwrap();
+
+    println!("You entered {}",first_num);
+    first_num
+}
+fn second_num () -> f32 {
+    println!("Enter second number");
+    let mut second_num = String::new();
+    io::stdin().read_line(& mut second_num).expect("Error");
+    let second_num : f32 = second_num.trim().parse().unwrap();
+
+    println!("You entered {}",second_num);
+    second_num
+}
+
+fn main (){
+     let x = function();
+        if x == 1 {
+        let sum = first_num() + second_num();
+    println!("the sum is {}",sum);
+    } else if x == 2 {
+        let subtraction = first_num() - second_num();
+    println!("the subtraction gives {}",subtraction);
+    } else if x ==3 {
+         let multiplication = first_num() * second_num();
+    println!("the product is {}",multiplication);
+    } else if x==4{
+ let division = first_num() / second_num();
+    println!("the answer is {}",division);
+    } 
+    else {
+        println!("we are quiting");
+    }
+}
