@@ -1,0 +1,28 @@
+fn main() {
+    let x = || println!("Hello World")
+    x();
+}
+fn main() {
+    let x = 1;
+     y = || {x = x + 1;println!("x = {}",x)};
+    println!("The function returns: {}",x(y)); 
+}
+fn main() {
+    let c = 1;
+    let x = || {c = c + 1;}; 
+    x();
+    println!("The new value of c is: {}",c); 
+}
+
+fn main() {
+let x = || { for i in 0..2 {println!("{}!", number);}
+X();
+}
+// Write a function which expects a closure as an argument and in the funciton body, it calls the closure. The closure expects u32 argument and returns the u32 value. The closure adds 1 to the argument and returns it.
+fn hello<T:Fn(u32)->u32>(x:T)->u32{
+   x(2)
+}
+ fn main() {
+    let mut x = |y| y + 1;
+ println!("{}",x(2));
+}
