@@ -1,0 +1,24 @@
+#[derive(Debug)]
+
+pub struct Children {
+    pub name: String,
+    pub language:String,
+    pub education: String,
+}
+
+fn adopt () {
+let child1 = Children {
+    name: String::from("Ali"),
+  language: String::from("bilingual"),
+  education: String::from("primary"),
+};
+
+let child2 = Children{
+    name: String::from("Fahad"),
+   language: String::from("bilingual"),
+   education: String::from("primary"),
+};
+println!("Ali is adopted. He has {} education and is {}", child1.education, child1.language);
+println!("Fahad is adopted. He has {} education and is {}", child2.education, child2.language);
+
+}
